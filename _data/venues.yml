@@ -1,0 +1,41 @@
+"VLDB23":
+  abbr: VLDB'23
+  url: https://vldb.org/2023/
+
+"ICDE23":
+  abbr: ICDE'23
+  url: https://icde2023.ics.uci.edu/
+
+"SC21":
+  abbr: SC'21
+  url: https://sc21.supercomputing.org/
+
+"SC20":
+  abbr: SC'20
+  url: https://sc20.supercomputing.org/
+
+"SC19":
+  abbr: SC'19
+  url: https://sc19.supercomputing.org/
+
+"HPDC19":
+  abbr: HPDC'19
+  url: http://www.hpdc.org/2019/
+
+"Bench18":
+  abbr: Bench'18
+  url: https://www.benchcouncil.org/bench2018/
+
+"BigData18":
+  abbr: BigData'18
+  url: https://bigdataieee.org/BigData2018/
+
+"TMSCS18":
+  abbr: TMSCS'18
+
+"BigData17":
+  abbr: BigData'17
+  url: https://bigdataieee.org/BigData2017/
+
+"HOTI17":
+  abbr: HOTI'17

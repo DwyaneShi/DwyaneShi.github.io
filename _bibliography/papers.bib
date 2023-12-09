@@ -1,0 +1,232 @@
+---
+---
+
+@article{10.14778/3611540.3611545,
+abbr = {VLDB23},
+bibtex_show = {true},
+html = {https://dl.acm.org/doi/abs/10.14778/3611540.3611545},
+pdf = {krypton-vldb23.pdf},
+selected = {true},
+
+author = {Chen, Jianjun and Shi, Rui and Chen, Heng and Zhang, Li and Li, Ruidong and Ding, Wei and Fan, Liya and Wang, Hao and Xiong, Mu and Chen, Yuxiang and Dong, Benchao and Guo, Kuankuan and Lin, Yuanjin and Liu, Xiao and Shi, Haiyang and Wang, Peipei and Wang, Zikang and Yang, Yemeng and Zhao, Junda and Zhou, Dongyan and Zuo, Zhikai and Liang, Yuming},
+title = {Krypton: Real-Time Serving and Analytical SQL Engine at ByteDance},
+year = {2023},
+issue_date = {August 2023},
+publisher = {VLDB Endowment},
+volume = {16},
+number = {12},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3611540.3611545},
+doi = {10.14778/3611540.3611545},
+abstract = {In recent years, at ByteDance, we have started seeing more and more business scenarios that require performing real-time data serving besides complex Ad Hoc analysis over large amounts of freshly imported data. The serving workload requires performing complex queries over massive newly added data items with minimal delay. These systems are often used in mission-critical scenarios, whereas traditional OLAP systems cannot handle such use cases. To work around the problem, ByteDance products often have to use multiple systems together in production, forcing the same data to be ETLed into multiple systems, causing data consistency problems, wasting resources, and increasing learning and maintenance costs.To solve the above problem, we built a single Hybrid Serving and Analytical Processing (HSAP) system to handle both workload types. HSAP is still in its early stage, and very few systems are yet on the market. This paper demonstrates how to build Krypton, a competitive cloud-native HSAP system that provides both excellent elasticity and query performance by utilizing many previously known query processing techniques, a hierarchical cache with persistent memory, and a native columnar storage format. Krypton can support high data freshness, high data ingestion rates, and strong data consistency. We also discuss lessons and best practices we learned in developing and operating Krypton in production.},
+journal = {Proc. VLDB Endow.},
+pages = {3528–3542},
+numpages = {15}
+}
+
+@INPROCEEDINGS{10184639,
+abbr = {ICDE23},
+bibtex_show = {true},
+html = {https://ieeexplore.ieee.org/document/10184639},
+pdf = {vedb-icde23.pdf},
+selected = {true},
+
+author={Sun, Jason and Ma, Haoxiang and Zhang, Li and Liu, Huicong and Shi, Haiyang and Luo, Shangyu and Wu, Kai and Bruhwiler, Kevin and Zhu, Cheng and Nie, Yuanyuan and Chen, Jianjun and Zhang, Lei and Liang, Yuming},
+booktitle={2023 IEEE 39th International Conference on Data Engineering (ICDE)},
+title={Accelerating Cloud-Native Databases with Distributed PMem Stores},
+year={2023},
+volume={},
+number={},
+pages={3043-3057},
+doi={10.1109/ICDE55515.2023.00233},
+abstract = {Relational databases have gone through a phase of architectural transition from a monolithic to a distributed architecture to take full advantage of cloud technology. These distributed databases can leverage remote storage to maintain larger amounts of data than monolithic databases at the cost of increased latency. At ByteDance, we have built a distributed database called veDB based on the popular compute-storage separation architecture, however we have observed the system is unable to provide both low latency and high throughput required by some business critical applications, such as batched order processing.In this paper we present our novel approaches to tackle this problem. We have modified our system’s storage to utilize persistent memory (PMem) coupled with a remote direct memory access (RDMA) network to reduce read/write latency and increase the throughput. We also propose a query push-down framework to push partial computations to the PMem storage layer to accelerate analytical queries and reduce the impact of the transaction workload in the computation layer. Our experiments show that our methods improve the throughput by up to 1.5× and reduce latency by up to 20× for standard benchmarks and real-world applications.}
+}
+
+@inproceedings{10.1145/3458817.3476191,
+abbr = {SC21},
+bibtex_show = {true},
+html = {https://dl.acm.org/doi/10.1145/3458817.3476191},
+pdf = {hatrpc-sc21.pdf},
+selected = {true},
+note = {* Tianxi Li and Haiyang Shi contributed equally to this work},
+
+author = {Li, Tianxi and Shi, Haiyang and Lu, Xiaoyi},
+title = {HatRPC: Hint-Accelerated Thrift RPC over RDMA},
+year = {2021},
+isbn = {9781450384421},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3458817.3476191},
+doi = {10.1145/3458817.3476191},
+abstract = {In this paper, we propose a novel hint-accelerated Remote Procedure Call (RPC) framework based on Apache Thrift over Remote Direct Memory Access (RDMA) protocols, called HatRPC. HatRPC proposes a hierarchical hint scheme towards optimizing heterogeneous RPC services and functions. The proposed hint design is composed of service-granularity and function-granularity hints for achieving varied optimization goals and reducing design space for further optimizing the underneath RDMA communication engine. We co-design a key-value store called HatKV with HatRPC and LMDB. The effectiveness and efficiency of HatRPC are validated and evaluated with our proposed Apache Thrift Benchmarks (ATB), YCSB, and TPC-H workloads. Performance evaluations show that the proposed HatRPC approach can deliver up to 55\% performance improvement for ATB benchmarks and up to 1.51X speedup for TPC-H queries compared with vanilla Thrift over IPoIB. In addition, the co-designed HatKV can achieve up to 85.5\% improvement for YCSB workloads.},
+booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+articleno = {36},
+numpages = {14},
+keywords = {thrift, RDMA, RPC, code generation, hint},
+location = {St. Louis, Missouri},
+series = {SC '21}
+}
+
+@inproceedings{10.5555/3433701.3433788,
+abbr = {SC20},
+bibtex_show = {true},
+html = {https://dl.acm.org/doi/10.5555/3433701.3433788},
+pdf = {inec-sc20.pdf},
+selected = {true},
+
+author = {Shi, Haiyang and Lu, Xiaoyi},
+title = {INEC: Fast and Coherent in-Network Erasure Coding},
+year = {2020},
+isbn = {9781728199986},
+publisher = {IEEE Press},
+abstract = {Erasure coding (EC) is a promising fault tolerance scheme that has been applied to many well-known distributed storage systems. The capability of Coherent EC Calculation and Networking on modern SmartNICs has demonstrated that EC will be an essential feature of in-network computing. In this paper, we propose a set of coherent in-network EC primitives, named INEC. Our analyses based on the proposed α-β performance model demonstrate that INEC primitives can enable different kinds of EC schemes to fully leverage the EC offload capability on modern SmartNICs. We implement INEC on commodity RDMA NICs and integrate it into five state-of-the-art EC schemes. Our experiments show that INEC primitives significantly reduce 50th, 95th, and 99th percentile latencies, and accelerate the end-to-end throughput, write, and degraded read performance of the key-value store co-designed with INEC by up to 99.57\%, 47.30\%, and 49.55\%, respectively.},
+booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+articleno = {66},
+numpages = {17},
+keywords = {erasure coding, in-network computing, next generation networking, fault tolerance},
+location = {Atlanta, Georgia},
+series = {SC '20}
+}
+
+@inproceedings{10.1145/3295500.3356178,
+abbr = {SC19},
+bibtex_show = {true},
+html = {https://dl.acm.org/doi/10.1145/3295500.3356178},
+pdf = {triec-sc19.pdf},
+selected = {true},
+award = {Best Student Paper Finalist},
+
+author = {Shi, Haiyang and Lu, Xiaoyi},
+title = {TriEC: Tripartite Graph Based Erasure Coding NIC Offload},
+year = {2019},
+isbn = {9781450362290},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3295500.3356178},
+doi = {10.1145/3295500.3356178},
+abstract = {Erasure Coding (EC) NIC offload is a promising technology for designing next-generation distributed storage systems. However, this paper has identified three major limitations of current-generation EC NIC offload schemes on modern SmartNICs. Thus, this paper proposes a new EC NIC offload paradigm based on the tripartite graph model, namely TriEC. TriEC supports both encode-and-send and receive-and-decode operations efficiently. Through theorem-based proofs, co-designs with memcached (i.e., TriEC-Cache), and extensive experiments, we show that TriEC is correct and can deliver better performance than the state-of-the-art EC NIC offload schemes (i.e., BiEC). Benchmark evaluations demonstrate that TriEC outperforms BiEC by up to 1.82x and 2.33x for encoding and recovering, respectively. With extended YCSB workloads, TriEC reduces the average write latency by up to 23.2\% and the recovery time by up to 37.8\%. TriEC outperforms BiEC by 1.32x for a full-node recovery with 8 million records.},
+booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+articleno = {44},
+numpages = {34},
+keywords = {erasure coding, tripartite, NIC offload, bipartite},
+location = {Denver, Colorado},
+series = {SC '19}
+}
+
+@inproceedings{10.1145/3307681.3325406,
+abbr = {HPDC19},
+bibtex_show = {true},
+html = {https://dl.acm.org/doi/10.1145/3307681.3325406},
+pdf = {umrec-hpdc19.pdf},
+selected = {true},
+
+author = {Shi, Haiyang and Lu, Xiaoyi and Shankar, Dipti and Panda, Dhabaleswar K.},
+title = {UMR-EC: A Unified and Multi-Rail Erasure Coding Library for High-Performance Distributed Storage Systems},
+year = {2019},
+isbn = {9781450366700},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3307681.3325406},
+doi = {10.1145/3307681.3325406},
+abstract = {Distributed storage systems typically need data to be stored redundantly to guarantee data durability and reliability. While the conventional approach towards this objective is to store multiple replicas, today's unprecedented data growth rates encourage modern distributed storage systems to employ Erasure Coding (EC) techniques, which can achieve better storage efficiency. Various hardware-based EC schemes have been proposed in the community to leverage the advanced compute capabilities on modern data center and cloud environments. Currently, there is no unified and easy way for distributed storage systems to fully exploit multiple devices such as CPUs, GPUs, and network devices (i.e., multi-rail support) to perform EC operations in parallel; thus, leading to the under-utilization of the available compute power. In this paper, we first introduce an analytical model to analyze the design scope of efficient EC schemes in distributed storage systems. Guided by the performance model, we propose UMR-EC, a Unified and Multi-Rail Erasure Coding library that can fully exploit heterogeneous EC coders. Our proposed interface is complemented by asynchronous semantics with optimized metadata-free scheme and EC rate-aware task scheduling that can enable a highly-efficient I/O pipeline. To show the benefits and effectiveness of UMR-EC, we re-design HDFS 3.x write/read pipelines based on the guidelines observed in the proposed performance model. Our performance evaluations show that our proposed designs can outperform the write performance of replication schemes and the default HDFS EC coder by 3.7x - 6.1x and 2.4x - 3.3x, respectively, and can improve the performance of read with failure recoveries up to 5.1x compared with the default HDFS EC coder. Compared with the fastest available CPU coder (i.e., ISA-L), our proposed designs have an improvement of up to 66.0\% and 19.4\% for write and read with failure recoveries, respectively.},
+booktitle = {Proceedings of the 28th International Symposium on High-Performance Parallel and Distributed Computing},
+pages = {219–230},
+numpages = {12},
+keywords = {high performance, multi-rail erasure coding, distributed storage systems},
+location = {Phoenix, AZ, USA},
+series = {HPDC '19}
+}
+
+
+@inproceedings{10.1007/978-3-030-32813-9_18,
+abbr = {Bench18},
+bibtex_show = {true},
+html = {https://link.springer.com/chapter/10.1007/978-3-030-32813-9_18},
+pdf = {ecbench-bench18.pdf},
+selected = {true},
+award = {Best Paper Award},
+
+abstract = {Various Erasure Coding (EC) schemes based on hardware accelerations have been proposed in the community to leverage the advanced compute capabilities on modern data centers, such as Intel ISA-L Onload EC coders and Mellanox InfiniBand Offload EC coders. These EC coders can play a vital role in designing next-generation distributed storage systems. Unfortunately, there does not exist a unified and easy way for distributed storage systems researchers and designers to benchmark, measure, and characterize the performance of these different EC coders. In this context, we propose a unified benchmark suite, called EC-Bench, to help the users to benchmark both onload and offload EC coders on modern hardware architectures. EC-Bench provides both encoding and decoding benchmarks with tunable parameter support. A rich set of metrics, including latency, actual and normalized throughput, CPU utilization, and cache pressure, can be reported through EC-Bench. Evaluations with EC-Bench demonstrate that hardware-optimized offload coders (e.g. Mellanox-EC) have lower demands on CPU and cache compared to onload coders, and highly optimized onload coders (e.g., Intel ISA-L) outperform offload coders for most configurations.},
+address = {Cham},
+author = {Shi, Haiyang and Lu, Xiaoyi and Panda, Dhabaleswar K.},
+booktitle = {Benchmarking, Measuring, and Optimizing},
+editor = {Zheng, Chen and Zhan, Jianfeng},
+isbn = {978-3-030-32813-9},
+pages = {215--230},
+publisher = {Springer International Publishing},
+title = {EC-Bench: Benchmarking Onload and Offload Erasure Coders on Modern Hardware Architectures},
+year = {2019}
+}
+
+@INPROCEEDINGS{8622615,
+abbr = {BigData18},
+bibtex_show = {true},
+html = {https://ieeexplore.ieee.org/document/8622615},
+pdf = {sparkudapl-bigdata18.pdf},
+selected = {false},
+
+abstract = {Efficient Big Data analytics on Cloud Computing systems is still full of challenges. One of the biggest hurdles is the unsatisfactory performance offered by underlying virtualized I/O devices such as networks. To address this issue, the modern cloud resource providers (e.g., Microsoft Azure) have deployed high-performance networks, such as Remote Direct Memory Access (RDMA) capable networks in their clouds. However, in this paper, we find that by far, the RDMA networks on Microsoft Azure cannot support either IPoIB or native standard Verbs-based RDMA protocols. Instead, applications need to use the uDAPL (i.e., user Direct Access Programming Library) interface to enable RDMA communication on Azure Cloud, which makes impossible for modern Big Data stacks to leverage these high-performance networks as none of them can support the uDAPL interface yet. To address this issue, we first design an efficient uDAPL-based communication library with the best combinations of uDAPL communication operations. Then, we adapt the designed uDAPL library into the Hadoop RPC ping-pong message passing engine and the Spark Shuffle engine for bulk data transferring. Through our designs, we can improve the performance of Big Data analytics workloads with Hadoop RPC and Spark on RDMA-enabled Azure VMs by up to 90% and 82%, respectively, and save users’ cloud resource renting cost by 4.24x. To the best of our knowledge, this is the first work to design a uDAPL-based RDMA communication engine for Big Data analytics stacks (e.g., Spark).},
+author={Lu, Xiaoyi and Shankar, Dipti and Shi, Haiyang and Panda, Dhabaleswar K.},
+booktitle={2018 IEEE International Conference on Big Data (Big Data)}, 
+title={Spark-uDAPL: Cost-Saving Big Data Analytics on Microsoft Azure Cloud with RDMA Networks}, 
+year={2018},
+volume={},
+number={},
+pages={321-326},
+doi={10.1109/BigData.2018.8622615}
+}
+
+@ARTICLE{8378049,
+abbr = {TMSCS18},
+bibtex_show = {true},
+html = {https://ieeexplore.ieee.org/document/8378049},
+pdf = {lu-tmscs18.pdf},
+selected = {false},
+
+abstract = {Deep Learning over Big Data (DLoBD) is an emerging paradigm to mine value from the massive amount of gathered data. Many Deep Learning frameworks, like Caffe, TensorFlow, etc., start running over Big Data stacks, such as Apache Hadoop and Spark. Even though a lot of activities are happening in the field, there is a lack of comprehensive studies on analyzing the impact of RDMA-capable networks and CPUs/GPUs on DLoBD stacks. To fill this gap, we propose a systematical characterization methodology and conduct extensive performance evaluations on four representative DLoBD stacks (i.e., CaffeOnSpark, TensorFlowOnSpark, MMLSpark/CNTKOnSpark, and BigDL) to expose the interesting trends regarding performance, scalability, accuracy, and resource utilization. Our observations show that RDMA-based design for DLoBD stacks can achieve up to 2.7x speedup compared to the IPoIB-based scheme. The RDMA scheme also scales better and utilizes resources more efficiently than IPoIB. For most cases, GPU-based schemes can outperform CPU-based designs, but we see that for LeNet on MNIST, CPU + MKL can achieve better performance than GPU and GPU + cuDNN on 16 nodes. Through our evaluation and an in-depth analysis on TensorFlowOnSpark, we find that there are large rooms to improve the designs of current-generation DLoBD stacks.},
+author={Lu, Xiaoyi and Shi, Haiyang and Biswas, Rajarshi and Javed, M. Haseeb and Panda, Dhabaleswar K.},
+journal={IEEE Transactions on Multi-Scale Computing Systems}, 
+title={DLoBD: A Comprehensive Study of Deep Learning over Big Data Stacks on HPC Clusters}, 
+year={2018},
+volume={4},
+number={4},
+pages={635-648},
+doi={10.1109/TMSCS.2018.2845886}
+}
+
+@INPROCEEDINGS{8257929,
+abbr = {BigData17},
+bibtex_show = {true},
+html = {https://ieeexplore.ieee.org/document/8257929},
+pdf = {lu-bigdata17.pdf},
+selected = {false},
+
+abstract = {IBM's POWER processor has been advocated as the high-performance architecture designed for processing Big Data workloads. With the collaborations through the OpenPOWER Foundation, more and more innovations for POWER architecture are emerging to solve Big Data challenges. For example, with the cooperation between IBM and Mellanox, the latest generation of Remote Direct Memory Access (RDMA) capable InfiniBand network can deliver tremendous performance on POWER processors. On the other hand, many RDMA-based designs and optimizations recently have been proposed in the community for accelerating big data processing systems (such as Apache Hadoop and Spark). However, these studies mostly focus on achieving higher performance over Intel Xeon or other x86 architectures. As OpenPOWER systems are getting momentum, we set out to answer the question how much can the RDMA-based communication runtime benefit Big Data processing middleware running over OpenPOWER systems as compared to the default TCP/IP-based designs. To answer this question, this paper first presents an extensive performance characterization on RDMA-based Hadoop RPC engine over OpenPOWER system. We further propose new designs to enable efficient CPU affinity policies and architecture-aware tuning in the RDMA-based communication engine for Hadoop and Spark. With these various accelerations, our performance evaluation shows that our proposed designs can achieve up to 2.73X performance improvement for Hadoop RPC benchmark as compared to default Hadoop running with IP-over-IB protocol on OpenPOWER systems. In addition, our proposed design can gain up to 29.37% performance improvement for Hadoop and Spark workloads as compared to the default RDMA designs running on an OpenPOWER cluster.},
+author={Lu, Xiaoyi and Shi, Haiyang and Shankar, Dipti and Panda, Dhabaleswar K.},
+booktitle={2017 IEEE International Conference on Big Data (Big Data)}, 
+title={Performance characterization and acceleration of big data workloads on OpenPOWER system}, 
+year={2017},
+volume={},
+number={},
+pages={213-222},
+doi={10.1109/BigData.2017.8257929}
+}
+
+@INPROCEEDINGS{8071061,
+abbr = {HOTI17},
+bibtex_show = {true},
+html = {https://ieeexplore.ieee.org/document/8071061},
+pdf = {lu-hoti17.pdf},
+selected = {false},
+
+abstract = {Deep Learning over Big Data (DLoBD) is becoming one of the most important research paradigms to mine value from the massive amount of gathered data. Many emerging deep learning frameworks start running over Big Data stacks, such as Hadoop and Spark. With the convergence of HPC, Big Data, and Deep Learning, these DLoBD stacks are taking advantage of RDMA and multi-/many-core based CPUs/GPUs. Even though a lot of activities are happening in the field, there is a lack of systematic studies on analyzing the impact of RDMA-capable networks and CPU/GPU on DLoBD stacks. To fill this gap, we propose a systematical characterization methodology and conduct extensive performance evaluations on three representative DLoBD stacks (i.e., CaffeOnSpark, TensorFlowOnSpark, and BigDL) to expose the interesting trends regarding performance, scalability, accuracy, and resource utilization. Our observations show that RDMA-based design for DLoBD stacks can achieve up to 2.7x speedup compared to the IPoIB based scheme. The RDMA scheme can also scale better and utilize resources more efficiently than the IPoIB scheme over InfiniBand clusters. For most cases, GPU-based deep learning can outperform CPU-based designs, but not always. We see that for LeNet on MNIST, CPU + MKL can achieve better performance than GPU and GPU + cuDNN on 16 nodes. Through our evaluation, we see that there are large rooms to improve the designs of current generation DLoBD stacks further.},
+author={Lu, Xiaoyi and Shi, Haiyang and Javed, M. Haseeb and Biswas, Rajarshi and Panda, Dhabaleswar K.},
+booktitle={2017 IEEE 25th Annual Symposium on High-Performance Interconnects (HOTI)}, 
+title={Characterizing Deep Learning over Big Data (DLoBD) Stacks on RDMA-Capable Networks}, 
+year={2017},
+volume={},
+number={},
+pages={87-94},
+doi={10.1109/HOTI.2017.24}
+}
+

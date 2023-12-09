@@ -220,11 +220,11 @@ plugins:
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
-  - jekyll/scholar
   - jekyll-sitemap
   - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
+  - jekyll/scholar # always keeps jekyll-scholar the last one
 
 # Sitemap settings
 defaults:
